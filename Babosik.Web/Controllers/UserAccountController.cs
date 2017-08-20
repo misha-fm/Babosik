@@ -11,25 +11,25 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Babosik.Web.Models;
-using Babosik.Web.Models.AccountViewModels;
+using Babosik.Web.Models.UserAccountViewModels;
 using Babosik.Web.Services;
 
 namespace Babosik.Web.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]
-    public class AccountController : Controller
+    public class UserAccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
 
-        public AccountController(
+        public UserAccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
-            ILogger<AccountController> logger)
+            ILogger<UserAccountController> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
