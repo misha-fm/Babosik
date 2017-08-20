@@ -14,6 +14,8 @@ using Babosik.Web.Models;
 using Babosik.Web.Models.UserAccountViewModels;
 using Babosik.Web.Services;
 
+using static Babosik.Web.Helpers.ControllerHelper;
+
 namespace Babosik.Web.Controllers
 {
     [Authorize]
@@ -247,7 +249,7 @@ namespace Babosik.Web.Controllers
         {
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
-            return RedirectToAction(nameof(HomeController.Index), "Home");
+            return RedirectToAction(nameof(HomeController.Index), GetNoSuffixName(nameof(HomeController)));
         }
 
         [HttpPost]
@@ -256,7 +258,7 @@ namespace Babosik.Web.Controllers
         public IActionResult ExternalLogin(string provider, string returnUrl = null)
         {
             // Request a redirect to the external login provider.
-            var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Account", new { returnUrl });
+            var redirectUrl = Url.Action(nameof(ExternalLoginCallback), GetNoSuffixName(nameof(UserAccountController)), new { returnUrl });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
             return Challenge(properties, provider);
         }
@@ -335,7 +337,7 @@ namespace Babosik.Web.Controllers
         {
             if (userId == null || code == null)
             {
-                return RedirectToAction(nameof(HomeController.Index), "Home");
+                return RedirectToAction(nameof(HomeController.Index), GetNoSuffixName(nameof(HomeController)));
             }
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
@@ -455,7 +457,7 @@ namespace Babosik.Web.Controllers
             }
             else
             {
-                return RedirectToAction(nameof(HomeController.Index), "Home");
+                return RedirectToAction(nameof(HomeController.Index), GetNoSuffixName(nameof(HomeController)));
             }
         }
 

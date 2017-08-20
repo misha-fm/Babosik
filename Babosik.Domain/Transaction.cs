@@ -2,7 +2,6 @@
 
 namespace Babosik.Domain
 {
-
     /// <summary>
     /// Транзакция
     /// </summary>

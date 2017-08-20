@@ -19,7 +19,8 @@ namespace Babosik.Web
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+                   .UseUrls("http://babosik:5000")
+                   .UseStartup<Startup>()
+                   .Build();
     }
 }

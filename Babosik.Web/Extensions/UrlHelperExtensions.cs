@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Babosik.Web.Controllers;
+using static Babosik.Web.Helpers.ControllerHelper;
 
 namespace Microsoft.AspNetCore.Mvc
 {
@@ -12,7 +13,7 @@ namespace Microsoft.AspNetCore.Mvc
         {
             return urlHelper.Action(
                 action: nameof(UserAccountController.ConfirmEmail),
-                controller: "Account",
+                controller: GetNoSuffixName(nameof(UserAccountController)),
                 values: new { userId, code },
                 protocol: scheme);
         }
@@ -21,7 +22,7 @@ namespace Microsoft.AspNetCore.Mvc
         {
             return urlHelper.Action(
                 action: nameof(UserAccountController.ResetPassword),
-                controller: "Account",
+                controller: GetNoSuffixName(nameof(UserAccountController)),
                 values: new { userId, code },
                 protocol: scheme);
         }

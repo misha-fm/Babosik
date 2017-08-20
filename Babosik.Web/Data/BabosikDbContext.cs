@@ -8,9 +8,9 @@ using Babosik.Web.Models;
 
 namespace Babosik.Web.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class BabosikDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public BabosikDbContext(DbContextOptions<BabosikDbContext> options)
             : base(options)
         {
         }
