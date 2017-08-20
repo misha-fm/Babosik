@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babosik.Domain", "Babosik.Domain\Babosik.Domain.csproj", "{C42465A9-E4F7-484E-9CCD-48823D52E3B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babosik.Web", "Babosik.Web\Babosik.Web.csproj", "{2124099F-E2FF-4B61-B41F-31F8F29F1C31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{C42465A9-E4F7-484E-9CCD-48823D52E3B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C42465A9-E4F7-484E-9CCD-48823D52E3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C42465A9-E4F7-484E-9CCD-48823D52E3B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2124099F-E2FF-4B61-B41F-31F8F29F1C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2124099F-E2FF-4B61-B41F-31F8F29F1C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2124099F-E2FF-4B61-B41F-31F8F29F1C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2124099F-E2FF-4B61-B41F-31F8F29F1C31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
